@@ -8,6 +8,7 @@
 Library/
 sysinfo.txt
 *.stackdump
+*.app
  
 # ============================================= #
 # Visual Studio / MonoDevelop / Rider generated #
