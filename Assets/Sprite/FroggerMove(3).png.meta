@@ -1,18 +1,15 @@
 fileFormatVersion: 2
-guid: 9b13aff2959224e9eb95cf52e14ac776
-timeCreated: 1476234489
+guid: 12014254da5e942cfa856a00a2d16cae
+timeCreated: 1476236197
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Frogger
-    21300002: 11067_0
-    21300004: Water
-    21300006: 11067_1
-    21300008: FroggerLife
-    21300010: Fruit?
-    21300012: Score
-    21300014: Timeline
-    21300016: 11067_2
+    21300000: FroggerMove(3)_0
+    21300002: FroggerMove(3)_1
+    21300004: FroggerMove(3)_2
+    21300006: FroggerMove(3)_3
+    21300008: FroggerMove(3)_4
+    21300010: FroggerMove(3)_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,119 +59,80 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frogger
+      name: FroggerMove(3)_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 672
-        width: 132
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 2}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: 11067_0
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 542
-        width: 21
-        height: 19
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 3, y: 2, z: 2, w: 1}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Water
-      rect:
-        serializedVersion: 2
-        x: 628
-        y: 190
-        width: 139
-        height: 102
+        x: 136
+        y: 284
+        width: 43
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 11067_1
+      name: FroggerMove(3)_1
       rect:
         serializedVersion: 2
-        x: 187
-        y: 697
-        width: 13
-        height: 7
+        x: 226
+        y: 281
+        width: 36
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: FroggerLife
+      name: FroggerMove(3)_2
       rect:
         serializedVersion: 2
-        x: 223
-        y: 680
-        width: 9
-        height: 11
+        x: 309
+        y: 295
+        width: 44
+        height: 33
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 0, z: 0, w: 4}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Fruit?
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 681
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Score
+      name: FroggerMove(3)_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 265
-        width: 110
-        height: 7
+        x: 396
+        y: 288
+        width: 47
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Timeline
+      name: FroggerMove(3)_4
       rect:
         serializedVersion: 2
-        x: 472
-        y: 16
-        width: 120
-        height: 8
+        x: 483
+        y: 292
+        width: 47
+        height: 36
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: 11067_2
+      name: FroggerMove(3)_5
       rect:
         serializedVersion: 2
-        x: 594
-        y: 17
-        width: 30
-        height: 7
+        x: 573
+        y: 288
+        width: 33
+        height: 43
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

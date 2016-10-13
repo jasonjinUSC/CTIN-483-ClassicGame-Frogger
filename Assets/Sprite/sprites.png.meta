@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed3fb54895db04b448cc541f4ad1e48a
-timeCreated: 1476234287
+guid: 2ccfe94ba22fa42cb91e8eb070181c38
+timeCreated: 1476235441
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: 11067-1_0
+    21300000: sprites_0
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,13 +54,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 11067-1_0
+      name: sprites_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 59
-        width: 32
-        height: 28
+        x: 2
+        y: 144
+        width: 44
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
