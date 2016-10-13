@@ -3,9 +3,9 @@ using System.Collections;
 
 public class FroggerController : MonoBehaviour {
 
-	public float moveSpeed;
-	private Vector3 moveDirection;
-	public float turnSpeed;
+    public float moveDistance;
+	Vector3 moveDirection;
+    Vector3 oldPosition;
 
     Animator animator;
     bool jumping;
@@ -20,19 +20,30 @@ public class FroggerController : MonoBehaviour {
 	void Update () {
         if (jumping)
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogJump") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
+            Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+            float moveFraction = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            if(moveFraction >= 1)
             {
-                Debug.Log("End " + Time.time);
+                moveFraction = 1;
+            }
+            transform.position = oldPosition + moveDistance * moveFraction * moveDirection;
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogJump") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+            {
+                Debug.Log("Ending");
                 animator.SetBool("Jumping", false);
                 jumping = false;
             }
         }
         else
         {
+            Debug.Log("check");
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogIdle"))
-            { 
+            {
+                Debug.Log("Idle");
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
+                    oldPosition = transform.position;
+                    moveDirection = Vector3.up;
                     Debug.Log("Start " + Time.time);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     animator.SetBool("Jumping", true);
@@ -40,18 +51,24 @@ public class FroggerController : MonoBehaviour {
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
+                    oldPosition = transform.position;
+                    moveDirection = Vector3.down;
                     transform.rotation = Quaternion.Euler(0, 0, 180);
                     animator.SetBool("Jumping", true);
                     jumping = true;
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
+                    oldPosition = transform.position;
+                    moveDirection = Vector3.left;
                     transform.rotation = Quaternion.Euler(0, 0, 90);
                     animator.SetBool("Jumping", true);
                     jumping = true;
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
+                    oldPosition = transform.position;
+                    moveDirection = Vector3.right;
                     transform.rotation = Quaternion.Euler(0, 0, 270);
                     animator.SetBool("Jumping", true);
                     jumping = true;

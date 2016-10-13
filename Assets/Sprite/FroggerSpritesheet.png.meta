@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1476338008
+timeCreated: 1476339032
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -15,6 +15,9 @@ TextureImporter:
     21300016: Frogger Life
     21300018: FroggerLife(2)
     21300020: FroggerSpritesheet_1
+    21300022: FrogA
+    21300024: FrogB
+    21300026: FrogC
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -201,6 +204,45 @@ TextureImporter:
         y: 355
         width: 27
         height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FrogA
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 673
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FrogB
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 672
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FrogC
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 676
+        width: 12
+        height: 9
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
