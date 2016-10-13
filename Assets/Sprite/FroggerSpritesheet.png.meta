@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1476339032
+timeCreated: 1476342954
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -18,6 +18,7 @@ TextureImporter:
     21300022: FrogA
     21300024: FrogB
     21300026: FrogC
+    21300028: BlackBox
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -243,6 +244,19 @@ TextureImporter:
         y: 676
         width: 12
         height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BlackBox
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 78
+        width: 9
+        height: 33
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
