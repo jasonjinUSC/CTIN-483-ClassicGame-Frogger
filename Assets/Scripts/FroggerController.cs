@@ -29,22 +29,18 @@ public class FroggerController : MonoBehaviour {
             transform.position = oldPosition + moveDistance * moveFraction * moveDirection;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogJump") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
             {
-                Debug.Log("Ending");
                 animator.SetBool("Jumping", false);
                 jumping = false;
             }
         }
         else
         {
-            Debug.Log("check");
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogIdle"))
             {
-                Debug.Log("Idle");
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
                     oldPosition = transform.position;
                     moveDirection = Vector3.up;
-                    Debug.Log("Start " + Time.time);
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     animator.SetBool("Jumping", true);
                     jumping = true;
