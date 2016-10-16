@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class FroggerController : MonoBehaviour {
 
@@ -10,35 +11,61 @@ public class FroggerController : MonoBehaviour {
     Animator animator;
     bool jumping;
 
+    public GameObject FrogObject;
+
     //Collision
+    List<GameObject> movingList;
     bool onMoving;
     bool onEnemy;
-    GameObject movingParent;
+    bool onWater;
+
+    bool frogDead;
 	// Use this for initialization
 	void Start () {
 		moveDirection = Vector3.right;
         animator = GetComponent<Animator>();
+
+        movingList = new List<GameObject>();
+        onEnemy = false;
+        onMoving = false;
         jumping = false;
+        frogDead = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("Moving " + onMoving + "    Enemy " + onEnemy);
-        if (jumping)
+        if(!frogDead)
+        {
+            Debug.Log("Moving " + onMoving + "    Enemy " + onEnemy);
+        }
+        if(frogDead)
+        {
+            if ((animator.GetCurrentAnimatorStateInfo(0).IsName("WaterDeath") || animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyDeath")) 
+                && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+            {
+                Instantiate(FrogObject, new Vector3(0.4f, -1.04f, 0f), Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
+        else if(onEnemy || (!onMoving && onWater))
+        {
+            KillFrog();
+        }
+        else if (jumping)
         {
             float moveFraction = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
             if(moveFraction >= 1)
             {
                 moveFraction = 1;
             }
-            transform.position = oldPosition + moveDistance * moveFraction * moveDirection;
+            transform.localPosition = oldPosition + moveDistance * moveFraction * moveDirection;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogJump") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
             {
                 animator.SetBool("Jumping", false);
                 jumping = false;
                 if(onMoving)
                 {
-                    transform.SetParent(movingParent.transform);
+                    transform.SetParent(movingList[movingList.Count-1].transform);
                 }
             }
         }
@@ -66,7 +93,7 @@ public class FroggerController : MonoBehaviour {
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    oldPosition = transform.position;
+                    oldPosition = transform.localPosition;
                     moveDirection = Vector3.left;
                     transform.rotation = Quaternion.Euler(0, 0, 90);
                     animator.SetBool("Jumping", true);
@@ -74,7 +101,7 @@ public class FroggerController : MonoBehaviour {
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    oldPosition = transform.position;
+                    oldPosition = transform.localPosition;
                     moveDirection = Vector3.right;
                     transform.rotation = Quaternion.Euler(0, 0, 270);
                     animator.SetBool("Jumping", true);
@@ -90,27 +117,50 @@ public class FroggerController : MonoBehaviour {
     {
         KillOnTouch killTouchScript = collider.GetComponent<KillOnTouch>();
         MovingPlatform movingPlatformScript = collider.GetComponent<MovingPlatform>();
-        if(killTouchScript != null)
+        WaterBehaviour water = collider.GetComponent<WaterBehaviour>();
+        if (killTouchScript != null)
         {
             onEnemy = true;
         }
-        if(movingPlatformScript != null)
+        if (water != null)
+        {
+            onWater = true;
+        }
+        if (movingPlatformScript != null)
         {
             onMoving = true;
-            movingParent = collider.gameObject;
+            if(!movingList.Contains(collider.gameObject))
+            {
+                movingList.Add(collider.gameObject);
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collider)
     {
         KillOnTouch killTouchScript = collider.GetComponent<KillOnTouch>();
         MovingPlatform movingPlatformScript = collider.GetComponent<MovingPlatform>();
+        WaterBehaviour water = collider.GetComponent<WaterBehaviour>();
         if (killTouchScript != null)
         {
             onEnemy = false;
         }
+        if(water != null)
+        {
+            onWater = false;
+        }
         if (movingPlatformScript != null)
         {
-            onMoving = false;
+            movingList.Remove(collider.gameObject);
+            if(movingList.Count == 0)
+            {
+                onMoving = false;
+            }
         }
+    }
+    void KillFrog()
+    {
+        frogDead = true;
+        animator.SetBool("Enemy", true);
+        transform.SetParent(null);
     }
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1476590721
+timeCreated: 1476594919
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -21,6 +21,13 @@ TextureImporter:
     21300028: BlackBox
     21300030: BlueBox
     21300032: CreditColor
+    21300034: DeadSkull
+    21300036: DeadWater1
+    21300038: DeadWater2
+    21300040: DeadWater3
+    21300042: DeadEnemy1
+    21300044: DeadEnemy2
+    21300046: DeadEnemy3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -272,6 +279,110 @@ TextureImporter:
         y: 16
         width: 25
         height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 145
+        width: 17
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadSkull
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 576
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadWater1
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 578
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadWater2
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 577
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadWater3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 576
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadEnemy1
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 577
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadEnemy2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 578
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: DeadEnemy3
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 576
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

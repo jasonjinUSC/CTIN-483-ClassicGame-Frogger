@@ -3,27 +3,31 @@ using System.Collections;
 
 public class Move : MonoBehaviour
 {
-    public Vector3 pointB;
 
-    IEnumerator Start()
+    float leftBorder = -1.26f;
+    float rightBorder = 1.26f;
+    float speed = 0.5f;
+
+    void Start()
     {
-        Vector3 pointA = transform.position;
-        while (true)
+
+    }
+
+    void Update()
+    {
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        if(transform.position.x > rightBorder)
         {
-            yield return StartCoroutine(MoveObject(transform, pointA, pointB, 3));
-            yield return StartCoroutine(MoveObject(transform, pointB, pointA, 3));
+            transform.Translate(Vector3.left * 2.52f);
+        }
+        if (transform.position.x < leftBorder)
+        {
+            transform.Translate(Vector3.right * 2.52f);
         }
     }
 
-    IEnumerator MoveObject(Transform thisTransform, Vector3 startPos, Vector3 endPos, float time)
+    public void setSpeed(float s)
     {
-        float i = 0.0f;
-        float rate = 1.0f / time;
-        while (i < 1.0f)
-        {
-            i += Time.deltaTime * rate;
-            thisTransform.position = Vector3.Lerp(startPos, endPos, i);
-            yield return null;
-        }
+        speed = s;
     }
 }
