@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SafeToTouch : MonoBehaviour {
+public class MovingPlatform : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

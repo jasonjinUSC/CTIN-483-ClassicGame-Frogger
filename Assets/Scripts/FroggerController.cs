@@ -9,6 +9,11 @@ public class FroggerController : MonoBehaviour {
 
     Animator animator;
     bool jumping;
+
+    //Collision
+    bool onMoving;
+    bool onEnemy;
+    GameObject movingParent;
 	// Use this for initialization
 	void Start () {
 		moveDirection = Vector3.right;
@@ -18,9 +23,9 @@ public class FroggerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log("Moving " + onMoving + "    Enemy " + onEnemy);
         if (jumping)
         {
-            Debug.Log(animator.GetCurrentAnimatorStateInfo(0).normalizedTime);
             float moveFraction = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
             if(moveFraction >= 1)
             {
@@ -31,6 +36,10 @@ public class FroggerController : MonoBehaviour {
             {
                 animator.SetBool("Jumping", false);
                 jumping = false;
+                if(onMoving)
+                {
+                    transform.SetParent(movingParent.transform);
+                }
             }
         }
         else
@@ -44,6 +53,7 @@ public class FroggerController : MonoBehaviour {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     animator.SetBool("Jumping", true);
                     jumping = true;
+                    transform.SetParent(null);
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
@@ -52,6 +62,7 @@ public class FroggerController : MonoBehaviour {
                     transform.rotation = Quaternion.Euler(0, 0, 180);
                     animator.SetBool("Jumping", true);
                     jumping = true;
+                    transform.SetParent(null);
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
@@ -74,4 +85,32 @@ public class FroggerController : MonoBehaviour {
         }
 	
 	}
+
+    void OnTriggerStay2D(Collider2D collider)
+    {
+        KillOnTouch killTouchScript = collider.GetComponent<KillOnTouch>();
+        MovingPlatform movingPlatformScript = collider.GetComponent<MovingPlatform>();
+        if(killTouchScript != null)
+        {
+            onEnemy = true;
+        }
+        if(movingPlatformScript != null)
+        {
+            onMoving = true;
+            movingParent = collider.gameObject;
+        }
+    }
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        KillOnTouch killTouchScript = collider.GetComponent<KillOnTouch>();
+        MovingPlatform movingPlatformScript = collider.GetComponent<MovingPlatform>();
+        if (killTouchScript != null)
+        {
+            onEnemy = false;
+        }
+        if (movingPlatformScript != null)
+        {
+            onMoving = false;
+        }
+    }
 }
