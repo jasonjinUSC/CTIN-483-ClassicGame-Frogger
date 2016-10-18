@@ -18,19 +18,26 @@ public class FroggerController : MonoBehaviour {
     bool onMoving;
     bool onEnemy;
     bool onWater;
-
+	AudioSource audio;
     bool frogDead;
 	// Use this for initialization
 	void Start () {
 		moveDirection = Vector3.right;
         animator = GetComponent<Animator>();
 
+
         movingList = new List<GameObject>();
         onEnemy = false;
         onMoving = false;
         jumping = false;
         frogDead = false;
+
+		audio = GetComponent<AudioSource>();
+			
 	}
+
+
+		
 	
 	// Update is called once per frame
 	void Update () {
@@ -81,6 +88,7 @@ public class FroggerController : MonoBehaviour {
                     animator.SetBool("Jumping", true);
                     jumping = true;
                     transform.SetParent(null);
+					audio.Play();
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
@@ -90,6 +98,7 @@ public class FroggerController : MonoBehaviour {
                     animator.SetBool("Jumping", true);
                     jumping = true;
                     transform.SetParent(null);
+					audio.Play();
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
@@ -98,6 +107,7 @@ public class FroggerController : MonoBehaviour {
                     transform.rotation = Quaternion.Euler(0, 0, 90);
                     animator.SetBool("Jumping", true);
                     jumping = true;
+					audio.Play();
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
@@ -106,6 +116,7 @@ public class FroggerController : MonoBehaviour {
                     transform.rotation = Quaternion.Euler(0, 0, 270);
                     animator.SetBool("Jumping", true);
                     jumping = true;
+					audio.Play();
                 }
 
             }

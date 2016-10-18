@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 
     float leftBorder = -1.26f;
     float rightBorder = 1.26f;
-    float speed = 0.5f;
+    float speed = -0.5f;
 
     void Start()
     {
