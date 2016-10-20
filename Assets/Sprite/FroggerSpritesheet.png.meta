@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1477003517
+timeCreated: 1477003843
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -113,7 +113,7 @@ TextureImporter:
         serializedVersion: 2
         x: 67
         y: 355
-        width: 28
+        width: 27
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -176,10 +176,10 @@ TextureImporter:
       name: FroggerSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 398
-        y: 30
+        x: 400
+        y: 16
         width: 224
-        height: 243
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
