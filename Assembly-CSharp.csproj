@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\KillOnTouch.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\Score.cs" />
      <Compile Include="Assets\Scripts\VechicleMove.cs" />
      <Compile Include="Assets\Scripts\WaterBehaviour.cs" />
  <Reference Include="UnityEngine.UI">
