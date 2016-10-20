@@ -6,7 +6,7 @@ public class Move : MonoBehaviour
 
     float leftBorder = -1.26f;
     float rightBorder = 1.26f;
-    float speed = -0.5f;
+    public float speed;
 
     void Start()
     {
@@ -15,14 +15,14 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        transform.Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         if(transform.position.x > rightBorder)
         {
-            transform.Translate(Vector3.left * 2.52f);
+            transform.Translate(Vector3.left * 2.52f, Space.World);
         }
         if (transform.position.x < leftBorder)
         {
-            transform.Translate(Vector3.right * 2.52f);
+            transform.Translate(Vector3.right * 2.52f, Space.World);
         }
     }
 

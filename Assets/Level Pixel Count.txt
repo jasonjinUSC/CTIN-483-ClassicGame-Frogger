@@ -1,0 +1,14 @@
+16 pixel borders
+
+Level 1
+
+Truck
+61 (Actually 60 as truck is a pixel wider)
+Loner
+None
+Pink
+50 and 49?50
+Green
+50 and 50
+Yello
+96 56 56
