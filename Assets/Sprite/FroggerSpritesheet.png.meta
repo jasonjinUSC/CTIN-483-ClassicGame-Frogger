@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1476827460
+timeCreated: 1477003517
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -30,6 +30,9 @@ TextureImporter:
     21300046: DeadEnemy3
     21300048: Up
     21300050: High Score
+    21300052: FroggerSpritesheet_2
+    21300054: Timer
+    21300056: Time
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -173,10 +176,10 @@ TextureImporter:
       name: FroggerSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 394
-        y: 0
+        x: 398
+        y: 30
         width: 224
-        height: 273
+        height: 243
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,6 +413,45 @@ TextureImporter:
         x: 481
         y: 265
         width: 63
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 488
+        width: 151
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Timer
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 16
+        width: 120
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 17
+        width: 30
         height: 7
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
