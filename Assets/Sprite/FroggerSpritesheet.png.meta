@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1477003843
+timeCreated: 1477086272
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -33,6 +33,12 @@ TextureImporter:
     21300052: FroggerSpritesheet_2
     21300054: Timer
     21300056: Time
+    21300058: Turtle1
+    21300060: Turtle2
+    21300062: Turtle3
+    21300064: TurtleSink1
+    21300066: TurtleSink2
+    21300068: TurtleSink3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -453,6 +459,84 @@ TextureImporter:
         y: 17
         width: 30
         height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle1
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 547
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle2
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 546
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Turtle3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 546
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurtleSink1
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 547
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurtleSink2
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 545
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: TurtleSink3
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 547
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

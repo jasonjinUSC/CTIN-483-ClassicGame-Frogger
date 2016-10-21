@@ -3,7 +3,7 @@
 Level 1
 
 Truck
-61 (Actually 60 as truck is a pixel wider)
+61 (Actually 60 as truck is a pixel wider (Depends if 27 or 28))
 Loner
 None
 Pink
