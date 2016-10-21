@@ -14,7 +14,9 @@ public class FroggerController : MonoBehaviour {
     public GameObject FrogObject;
 
     //Collision
+    [SerializeField]
     List<GameObject> movingList;
+    [SerializeField]
     bool onMoving;
     bool onEnemy;
     bool onWater;
@@ -43,7 +45,7 @@ public class FroggerController : MonoBehaviour {
 	void Update () {
         if(!frogDead)
         {
-            Debug.Log("Moving " + onMoving + "    Enemy " + onEnemy);
+            //Debug.Log("Moving " + onMoving + "    Enemy " + onEnemy);
         }
         if(frogDead)
         {
@@ -72,6 +74,7 @@ public class FroggerController : MonoBehaviour {
                 jumping = false;
                 if(onMoving)
                 {
+                    Debug.Log("Set Parent " + Time.time);
                     transform.SetParent(movingList[movingList.Count-1].transform);
                 }
             }
@@ -80,8 +83,14 @@ public class FroggerController : MonoBehaviour {
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogIdle"))
             {
+                if(!onMoving)
+                {
+                    transform.SetParent(null);
+                }
+
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
+                    Debug.Log("Up");
                     oldPosition = transform.position;
                     moveDirection = Vector3.up;
                     transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -92,6 +101,7 @@ public class FroggerController : MonoBehaviour {
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
+                    Debug.Log("Down");
                     oldPosition = transform.position;
                     moveDirection = Vector3.down;
                     transform.rotation = Quaternion.Euler(0, 0, 180);
@@ -172,6 +182,5 @@ public class FroggerController : MonoBehaviour {
     {
         frogDead = true;
         animator.SetBool("Enemy", true);
-        transform.SetParent(null);
     }
 }
