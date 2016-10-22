@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1477086272
+timeCreated: 1477093294
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -39,6 +39,16 @@ TextureImporter:
     21300064: TurtleSink1
     21300066: TurtleSink2
     21300068: TurtleSink3
+    21300070: timer 1
+    21300072: timer 2
+    21300074: timer 3
+    21300076: timer 4
+    21300078: Timer (4)
+    21300080: FroggerSpritesheet_3
+    21300082: FroggerSpritesheet_4
+    21300084: FroggerSpritesheet_5
+    21300086: score 2
+    21300088: FroggerSpritesheet_6
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -182,8 +192,8 @@ TextureImporter:
       name: FroggerSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 400
-        y: 16
+        x: 513
+        y: 0
         width: 224
         height: 256
       alignment: 0
@@ -536,6 +546,136 @@ TextureImporter:
         x: 556
         y: 547
         width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: timer 1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 680
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: timer 2
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 680
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: timer 3
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 680
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: timer 4
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 582
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Timer (4)
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 680
+        width: 2
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 512
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 515
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 517
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: score 2
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 517
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FroggerSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 179
+        width: 90
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
