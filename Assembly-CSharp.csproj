@@ -47,11 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\FroggerController.cs" />
      <Compile Include="Assets\Scripts\KillOnTouch.cs" />
+     <Compile Include="Assets\Scripts\LifeCount.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\VechicleMove.cs" />
      <Compile Include="Assets\Scripts\WaterBehaviour.cs" />
+     <None Include="Assets\Level Pixel Count.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
