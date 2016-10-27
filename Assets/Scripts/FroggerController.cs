@@ -8,10 +8,15 @@ public class FroggerController : MonoBehaviour {
 	Vector3 moveDirection;
     Vector3 oldPosition;
 
+    Score score;
+    float highestY;
+
     Animator animator;
     bool jumping;
 
     public GameObject FrogObject;
+
+    FrogLifeController lifeController;
 
     //Collision
     [SerializeField]
@@ -27,6 +32,7 @@ public class FroggerController : MonoBehaviour {
 		moveDirection = Vector3.right;
         animator = GetComponent<Animator>();
 
+        lifeController = GameObject.FindObjectOfType<FrogLifeController>().GetComponent<FrogLifeController>();
 
         movingList = new List<GameObject>();
         onEnemy = false;
@@ -35,6 +41,9 @@ public class FroggerController : MonoBehaviour {
         frogDead = false;
 
 		audio = GetComponent<AudioSource>();
+
+        score = GameObject.FindObjectOfType<Score>().GetComponent<Score>();
+        highestY = transform.position.y;
 			
 	}
 
@@ -70,6 +79,12 @@ public class FroggerController : MonoBehaviour {
             transform.localPosition = oldPosition + moveDistance * moveFraction * moveDirection;
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("FrogJump") && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
             {
+                if(transform.position.y > highestY)
+                {
+                    highestY = transform.position.y;
+                    score.addScore(10);
+                }
+
                 animator.SetBool("Jumping", false);
                 jumping = false;
                 if(onMoving)
@@ -198,8 +213,9 @@ public class FroggerController : MonoBehaviour {
             }
         }
     }
-    void KillFrog()
+    public void KillFrog()
     {
+        lifeController.loseLives();
         frogDead = true;
         animator.SetBool("Enemy", true);
     }

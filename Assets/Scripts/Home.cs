@@ -6,11 +6,15 @@ public class Home : MonoBehaviour {
     bool frogHome;
     Animator animator;
     public GameObject FrogObject;
+    Score score;
+    Timer time;
 
 	// Use this for initialization
 	void Start () {
         animator = GetComponent<Animator>();
-	}
+        score = GameObject.FindObjectOfType<Score>().GetComponent<Score>();
+        time = GameObject.FindObjectOfType<Timer>().GetComponent<Timer>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,6 +40,8 @@ public class Home : MonoBehaviour {
     {
         if (!frogHome)
         {
+            score.addScore(time.getTimeLeft() * 10);
+            time.resetTime();
             animator.SetTrigger("GetFrog");
             frogHome = true;
             gameObject.layer = 8;

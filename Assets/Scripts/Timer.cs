@@ -3,23 +3,36 @@ using System.Collections;
 
 public class Timer : MonoBehaviour {
 
-	public Sprite[] sprites; // 50.13 second per frame (fake version)
-	//32 seconds (original) 
-	public float framesPerSecond;
-	private SpriteRenderer spriteRenderer;
+    float timeLimit = 32f;
+    float time;
 
 	// Use this for initialization
 	void Start () {
-		spriteRenderer = GetComponent<Renderer>() as SpriteRenderer;
+        resetTime();
 	
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		int index = (int)(Time.timeSinceLevelLoad * framesPerSecond);
-		index = index % sprites.Length;
-		spriteRenderer.sprite = sprites[ index ];
+        time += Time.deltaTime;
+
+        transform.localScale = new Vector3((timeLimit - time)/timeLimit, 1, 1);
+
+        if(time > timeLimit)
+        {
+            GameObject.FindObjectOfType<FroggerController>().GetComponent<FroggerController>().KillFrog();
+            resetTime();
+        }
 	
 	}
+    public int getTimeLeft()
+    {
+        return (int) timeLimit - (int)time;
+    }
+
+    public void resetTime()
+    {
+        time = 0;
+    }
 }
