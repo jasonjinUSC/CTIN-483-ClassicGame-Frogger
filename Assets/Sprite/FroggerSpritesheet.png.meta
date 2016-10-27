@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1477093294
+timeCreated: 1477539191
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -49,6 +49,7 @@ TextureImporter:
     21300084: FroggerSpritesheet_5
     21300086: score 2
     21300088: FroggerSpritesheet_6
+    21300090: Log(small2)
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -676,6 +677,19 @@ TextureImporter:
         x: 419
         y: 179
         width: 90
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Log(small2)
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 211
+        width: 42
         height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
