@@ -31,7 +31,11 @@ public class Home : MonoBehaviour {
 
     public void resetHome()
     {
-        animator.SetTrigger("Reset");
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("HomeFrog"))
+        {
+            animator.SetTrigger("Reset");
+
+        }
         frogHome = false;
         gameObject.layer = 0;
     }
