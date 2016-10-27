@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class FroggerController : MonoBehaviour {
 
-    public float moveDistance;
+    float moveDistance = 0.16f;
 	Vector3 moveDirection;
     Vector3 oldPosition;
 
@@ -52,7 +52,7 @@ public class FroggerController : MonoBehaviour {
             if ((animator.GetCurrentAnimatorStateInfo(0).IsName("WaterDeath") || animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyDeath")) 
                 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
             {
-                Instantiate(FrogObject, new Vector3(0.4f, -1.04f, 0f), Quaternion.identity);
+                Instantiate(FrogObject, new Vector3(0.07f, -1.05f, 0f), Quaternion.identity);
                 Destroy(this.gameObject);
             }
         }
@@ -74,7 +74,7 @@ public class FroggerController : MonoBehaviour {
                 jumping = false;
                 if(onMoving)
                 {
-                    Debug.Log("Set Parent " + Time.time);
+                    //Debug.Log("Set Parent " + Time.time);
                     transform.SetParent(movingList[movingList.Count-1].transform);
                 }
             }
@@ -90,43 +90,63 @@ public class FroggerController : MonoBehaviour {
 
                 if (Input.GetKeyDown(KeyCode.UpArrow))
                 {
-                    Debug.Log("Up");
-                    oldPosition = transform.position;
-                    moveDirection = Vector3.up;
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
-                    animator.SetBool("Jumping", true);
-                    jumping = true;
-                    transform.SetParent(null);
-					audio.Play();
+                    Vector3 newPosition = Camera.main.WorldToViewportPoint(transform.position + Vector3.up * moveDistance);
+                    if (!(newPosition.y < 0.02f || newPosition.x > .98f || newPosition.x < 0.02f))
+                    {
+                        //Debug.Log("Up");
+                        oldPosition = transform.position;
+                        moveDirection = Vector3.up;
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        animator.SetBool("Jumping", true);
+                        jumping = true;
+                        transform.SetParent(null);
+                        audio.Play();
+
+                    }
                 }
                 else if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                    Debug.Log("Down");
-                    oldPosition = transform.position;
-                    moveDirection = Vector3.down;
-                    transform.rotation = Quaternion.Euler(0, 0, 180);
-                    animator.SetBool("Jumping", true);
-                    jumping = true;
-                    transform.SetParent(null);
-					audio.Play();
+                    Vector3 newPosition = Camera.main.WorldToViewportPoint(transform.position + Vector3.down * moveDistance);
+                    if (!(newPosition.y < 0.02f || newPosition.x > .98f || newPosition.x < 0.02f))
+                    {
+                        //Debug.Log("Down");
+                        oldPosition = transform.position;
+                        moveDirection = Vector3.down;
+                        transform.rotation = Quaternion.Euler(0, 0, 180);
+                        animator.SetBool("Jumping", true);
+                        jumping = true;
+                        transform.SetParent(null);
+                        audio.Play();
+
+                    }
                 }
                 else if (Input.GetKeyDown(KeyCode.LeftArrow))
                 {
-                    oldPosition = transform.localPosition;
-                    moveDirection = Vector3.left;
-                    transform.rotation = Quaternion.Euler(0, 0, 90);
-                    animator.SetBool("Jumping", true);
-                    jumping = true;
-					audio.Play();
+                    Vector3 newPosition = Camera.main.WorldToViewportPoint(transform.position + Vector3.left * moveDistance);
+                    if (!(newPosition.y < 0.02f || newPosition.x > .98f || newPosition.x < 0.02f))
+                    {
+                        oldPosition = transform.localPosition;
+                        moveDirection = Vector3.left;
+                        transform.rotation = Quaternion.Euler(0, 0, 90);
+                        animator.SetBool("Jumping", true);
+                        jumping = true;
+                        audio.Play();
+
+                    }
                 }
                 else if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
-                    oldPosition = transform.localPosition;
-                    moveDirection = Vector3.right;
-                    transform.rotation = Quaternion.Euler(0, 0, 270);
-                    animator.SetBool("Jumping", true);
-                    jumping = true;
-					audio.Play();
+                    Vector3 newPosition = Camera.main.WorldToViewportPoint(transform.position + Vector3.right * moveDistance);
+                    if (!(newPosition.y < 0.02f || newPosition.x > .98f || newPosition.x < 0.02f))
+                    {
+                        oldPosition = transform.localPosition;
+                        moveDirection = Vector3.right;
+                        transform.rotation = Quaternion.Euler(0, 0, 270);
+                        animator.SetBool("Jumping", true);
+                        jumping = true;
+                        audio.Play();
+
+                    }
                 }
 
             }
