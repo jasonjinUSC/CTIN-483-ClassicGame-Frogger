@@ -50,8 +50,12 @@
      <Compile Include="Assets\Scripts\LifeCount.cs" />
      <Compile Include="Assets\Scripts\Move.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Score.cs" />
+     <Compile Include="Assets\Scripts\SmoothFollow.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
+     <Compile Include="Assets\Scripts\Turtle.cs" />
      <Compile Include="Assets\Scripts\VechicleMove.cs" />
      <Compile Include="Assets\Scripts\WaterBehaviour.cs" />
      <None Include="Assets\Level Pixel Count.txt" />
