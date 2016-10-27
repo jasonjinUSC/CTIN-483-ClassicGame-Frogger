@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 12597cde465552746b3da02f0ce4f400
-timeCreated: 1477539191
+timeCreated: 1477539998
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -50,6 +50,8 @@ TextureImporter:
     21300086: score 2
     21300088: FroggerSpritesheet_6
     21300090: Log(small2)
+    21300092: Tuttle 3
+    21300094: Tuttle 2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -193,10 +195,10 @@ TextureImporter:
       name: FroggerSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 513
+        x: 575
         y: 0
-        width: 224
-        height: 256
+        width: 193
+        height: 232
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,7 +312,7 @@ TextureImporter:
       name: FroggerSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 543
+        x: 550
         y: 145
         width: 17
         height: 61
@@ -691,6 +693,32 @@ TextureImporter:
         y: 211
         width: 42
         height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tuttle 3
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 194
+        width: 47
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Tuttle 2
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 194
+        width: 31
+        height: 11
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
