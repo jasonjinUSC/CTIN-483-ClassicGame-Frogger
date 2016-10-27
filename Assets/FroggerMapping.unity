@@ -971,7 +971,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &134455271
 Animator:
   serializedVersion: 3
@@ -1379,7 +1379,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &173334520
 Animator:
   serializedVersion: 3
@@ -1955,16 +1955,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 61000011641959382, guid: 7d12371a99e783c498bd53649604cfcd,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 0.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010254631774, guid: 7d12371a99e783c498bd53649604cfcd,
-        type: 2}
-      propertyPath: speed
-      value: -0.35
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d12371a99e783c498bd53649604cfcd, type: 2}
   m_IsPrefabParent: 0
@@ -2105,7 +2095,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &300368132
 Animator:
   serializedVersion: 3
@@ -2519,7 +2509,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &359886321
 Animator:
   serializedVersion: 3
@@ -2954,7 +2944,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &454871133
 Animator:
   serializedVersion: 3
@@ -3110,7 +3100,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &498417153
 Animator:
   serializedVersion: 3
@@ -3733,7 +3723,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &557920095
 Animator:
   serializedVersion: 3
@@ -3875,7 +3865,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &561230893
 Animator:
   serializedVersion: 3
@@ -4174,7 +4164,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &588996692
 Animator:
   serializedVersion: 3
@@ -4934,7 +4924,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &763978788
 Animator:
   serializedVersion: 3
@@ -5852,7 +5842,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1013790584
 Animator:
   serializedVersion: 3
@@ -5994,7 +5984,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1023075279
 Animator:
   serializedVersion: 3
@@ -6122,7 +6112,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1029745644
 Animator:
   serializedVersion: 3
@@ -7041,7 +7031,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1172340543
 Animator:
   serializedVersion: 3
@@ -7952,7 +7942,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1323049077
 Animator:
   serializedVersion: 3
@@ -8542,7 +8532,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1404891400
 Animator:
   serializedVersion: 3
@@ -8855,7 +8845,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1442827884
 Animator:
   serializedVersion: 3
@@ -9215,7 +9205,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.09, y: 0.1}
+  m_Size: {x: 0.11, y: 0.1}
 --- !u!95 &1474454258
 Animator:
   serializedVersion: 3
@@ -10426,6 +10416,11 @@ Prefab:
         type: 2}
       propertyPath: speed
       value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 61000011641959382, guid: 7d12371a99e783c498bd53649604cfcd,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d12371a99e783c498bd53649604cfcd, type: 2}
